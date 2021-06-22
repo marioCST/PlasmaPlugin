@@ -34,7 +34,7 @@ public class FormTroll {
     }
 
     public void openTroll(Player player) {
-        SimpleForm form = new SimpleForm.Builder("§cAdminshop",
+        SimpleForm form = new SimpleForm.Builder("§cTroll",
                 getNP("", "§aSuch dir eine Kategorie aus!"))
                 .addButton(new ElementButton("§6Item Drop", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/itemphysics.png")), e -> this.openItemDropMenu(player))
                 .addButton(new ElementButton("§6Damage", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/hitcolor.png")), e -> this.openDamageMenu(player))

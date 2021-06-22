@@ -1,0 +1,6 @@
+name: PlasmaPlugIn
+api: 1.0.12
+main: de.mariocst.MarioMain
+version: 1.0
+authors: [ "marioCST" ]
+description: Plasma PlugIn by marioCST!

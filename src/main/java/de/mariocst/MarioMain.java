@@ -4,8 +4,6 @@ import cn.nukkit.AdventureSettings;
 import cn.nukkit.Player;
 import cn.nukkit.command.CommandMap;
 import cn.nukkit.command.CommandSender;
-import cn.nukkit.form.element.ElementButton;
-import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.level.Sound;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.plugin.PluginManager;
@@ -34,7 +32,9 @@ import de.mariocst.Forms.FormWindows;
 import de.mariocst.Listeners.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class MarioMain extends PluginBase implements AntiCheatAPI {
     private static MarioMain instance;
@@ -165,7 +165,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         // Plugin Manager
         PluginManager manager = this.getServer().getPluginManager();
 
-        manager.registerEvents(new PlayerQuitListener(), this);
+        manager.registerEvents(new QuitListener(), this);
         manager.registerEvents(new HungerListener(), this);
         manager.registerEvents(new AchievementListener(), this);
         manager.registerEvents(new InventoryListener(), this);

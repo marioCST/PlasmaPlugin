@@ -7,7 +7,7 @@ import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerQuitEvent;
 import de.mariocst.MarioMain;
 
-public class PlayerQuitListener implements Listener {
+public class QuitListener implements Listener {
     @EventHandler
     public void PlayerQuitEvent(PlayerQuitEvent e) {
         Player player = e.getPlayer();
@@ -18,7 +18,7 @@ public class PlayerQuitListener implements Listener {
         }
 
         if (player.getName().equals("marioCST")) {
-            e.setQuitMessage(MarioMain.getPrefix() + "marioCST der dumme Developer ist Offline!");
+            e.setQuitMessage(MarioMain.getPrefix() + "marioCST der inkompetente Developer ist Offline!");
         }
         else if (player.getName().equals("siwoke")) {
             e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief Siwoke ist Offline!");

@@ -93,6 +93,7 @@ public class MarioHelpUIListener implements Listener {
 
                 final FormWindowSimple serui = new FormWindowSimple("§6-- Server --", "§6Bitte wähle einen Command.");
 
+                serui.addButton(new ElementButton("/adminshop"));
                 serui.addButton(new ElementButton("/cb1"));
                 serui.addButton(new ElementButton("/end"));
                 serui.addButton(new ElementButton("/farmwelt"));
@@ -502,6 +503,17 @@ public class MarioHelpUIListener implements Listener {
                     }
                 }
                 if (fws.getTitle().equals("§6-- Server --")) {
+                    if (button.equals("/adminshop")) {
+                        final FormWindowSimple adui = new FormWindowSimple("§6/adminshop", "§6Informationen zu /adminshop");
+
+                        adui.setContent("§6Usage: /adminshop\n" +
+                                "§6Description: Öffnet die UI des Adminshops!\n" +
+                                "§6Permission: mario.adminshop"
+                        );
+                        adui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(adui);
+                    }
                     if (button.equals("/cb1")) {
                         final FormWindowSimple cbui = new FormWindowSimple("§6/cb1", "§6Informationen zu /cb1");
 
@@ -667,9 +679,9 @@ public class MarioHelpUIListener implements Listener {
                         player.showFormWindow(seui);
                     }
                 }
-                if (fws.getTitle().equals("§6/cb1") || fws.getTitle().equals("§6/end") || fws.getTitle().equals("§6/farmwelt") ||
-                    fws.getTitle().equals("§6/kickall") || fws.getTitle().equals("§6/lobby") || fws.getTitle().equals("§6/nether") ||
-                    fws.getTitle().equals("§6/worldtp")) {
+                if (fws.getTitle().equals("§6/adminshop") || fws.getTitle().equals("§6/cb1") || fws.getTitle().equals("§6/end") ||
+                    fws.getTitle().equals("§6/farmwelt") || fws.getTitle().equals("§6/kickall") || fws.getTitle().equals("§6/lobby") ||
+                    fws.getTitle().equals("§6/nether") || fws.getTitle().equals("§6/worldtp")) {
                     if (button.equals("§cZurück")) {
                         player.showFormWindow(serui);
                     }

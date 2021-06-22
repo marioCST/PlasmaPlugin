@@ -106,6 +106,7 @@ public class MarioHelpCommand extends Command {
                             case "9" -> {
                                 sendHelpPage(player, 9);
                                 player.sendMessage(MarioMain.getPrefix() + "§6-- Server --");
+                                player.sendMessage(MarioMain.getPrefix() + "§6/adminshop - Öffnet die UI des Adminshops!");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/cb1 - Teleportiert dich auf CityBuild 1");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/end - Teleportiert dich ins End");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/farmwelt - Teleportiert dich in die Farmwelt!");

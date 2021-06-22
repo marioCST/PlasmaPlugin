@@ -26,17 +26,6 @@ public class CoordinatesListener implements Listener {
                     }
                 }
 
-                if (!player.getLevelName().equals("cb01")) {
-                    if (!player.hasPermission("mario.fly.bypass") && !player.hasPermission("mario.*") &&
-                            !player.hasPermission("*") && !player.isOp() && MarioMain.hasFly(player) &&
-                            player.getGamemode() != 1 && player.getGamemode() != 3) {
-                        player.getAdventureSettings().set(AdventureSettings.Type.ALLOW_FLIGHT, false);
-                        player.getAdventureSettings().update();
-                    }
-
-
-                }
-
                 player.sendMessage(MarioMain.getPrefix() + "Bitte bleibe überm Bedrock!");
             }
         }

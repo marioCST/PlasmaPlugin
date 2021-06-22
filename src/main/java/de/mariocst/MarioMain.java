@@ -28,6 +28,7 @@ import de.mariocst.Commands.Others.*;
 import de.mariocst.Commands.World.*;
 import de.mariocst.Config.*;
 import de.mariocst.Forms.FormListener;
+import de.mariocst.Forms.FormTroll;
 import de.mariocst.Forms.FormWindows;
 import de.mariocst.Listeners.*;
 import lombok.Getter;
@@ -51,6 +52,9 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
 
     @Getter
     public FormWindows formWindows;
+
+    @Getter
+    public FormTroll formTroll;
 
     @Override
     public void onLoad() {
@@ -185,6 +189,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
 
         // Form Windows
         this.formWindows = new FormWindows();
+        this.formTroll = new FormTroll();
     }
 
     public static MarioMain getInstance() {

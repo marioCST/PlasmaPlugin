@@ -37,7 +37,10 @@ public class TrollCommand extends Command {
             Player player = (Player) sender;
             if (sender.hasPermission("mario.troll") || sender.hasPermission("mario.*") || sender.hasPermission("*") || sender.isOp()) {
                 try {
-                    if (args.length == 2) {
+                    if (args.length == 0) {
+                        MarioMain.getInstance().getFormTroll().openTroll(player);
+                    }
+                    else if (args.length == 2) {
                         Player t = MarioMain.getInstance().getServer().getPlayer(args[1].replaceAll("_", " ").replaceAll("\"", ""));
 
                         try {

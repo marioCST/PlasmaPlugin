@@ -61,7 +61,9 @@ public class FormWindows {
                 .addButton(new ElementButton("§6Eiche || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/oak_log.png?token=AQJ2PALUILLOLKCFWHWNKQLA2HFNC")), e -> this.openOakMenu(player))
                 .addButton(new ElementButton("§6Birke || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/birch_log.png?token=AQJ2PANOWDRPFDGLNMUG5ULA2HFKS")), e -> this.openBirchMenu(player))
                 .addButton(new ElementButton("§6Fichte || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/spruce_log.png?token=AQJ2PAJRHAZ5TCRFLMC3Z63A2HFOI")), e -> this.openSpruceMenu(player))
+                .addButton(new ElementButton("§6Schawrzeiche || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/dark_oak_log.png")), e -> this.openDarkOakMenu(player))
                 .addButton(new ElementButton("§6Dschungel || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/jungle_log.png?token=AQJ2PAJLDJVYHCXUEVPUNS3A2HFL2")), e -> this.openJungleMenu(player))
+                .addButton(new ElementButton("§6Akazie || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/acacia_log.png")), e -> this.openAcaciaMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
         form.send(player);
@@ -462,6 +464,39 @@ public class FormWindows {
                 .build();
         form.send(player);
     }
+    
+    public void openDarkOakMenu(Player player) {
+        CustomForm form = new CustomForm.Builder("§6Schwarzeiche")
+                .addElement(new ElementInput("Anzahl", "64"))
+                .onSubmit((e, r) -> {
+                    if (r.getInputResponse(0).isEmpty()) {
+                        player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Menge ein!");
+                        player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
+                    }
+
+                    try {
+                        int amount =Integer.parseInt(r.getInputResponse(0));
+                        long price = 15L * amount;
+
+                        if (EconomyAPI.getInstance().myMoney(player) < price) {
+                            player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
+                        }
+                        else {
+                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                            dispatchCommand(consoleSender(), "give " + player.getName() + " 162:1 " + amount);
+
+                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Schwarzeichenstämme gekauft!");
+                        }
+                    }
+                    catch (NumberFormatException n) {
+                        n.printStackTrace();
+                        player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine gültige oder ganze Zahl ein!");
+                        player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
+                    }
+                })
+                .build();
+        form.send(player);
+    }
 
     public void openJungleMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Dschungel")
@@ -484,6 +519,39 @@ public class FormWindows {
                             dispatchCommand(consoleSender(), "give " + player.getName() + " 17:3 " + amount);
 
                             player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Dschungelstämme gekauft!");
+                        }
+                    }
+                    catch (NumberFormatException n) {
+                        n.printStackTrace();
+                        player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine gültige oder ganze Zahl ein!");
+                        player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
+                    }
+                })
+                .build();
+        form.send(player);
+    }
+
+    public void openAcaciaMenu(Player player) {
+        CustomForm form = new CustomForm.Builder("§6Akazie")
+                .addElement(new ElementInput("Anzahl", "64"))
+                .onSubmit((e, r) -> {
+                    if (r.getInputResponse(0).isEmpty()) {
+                        player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Menge ein!");
+                        player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
+                    }
+
+                    try {
+                        int amount =Integer.parseInt(r.getInputResponse(0));
+                        long price = 15L * amount;
+
+                        if (EconomyAPI.getInstance().myMoney(player) < price) {
+                            player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
+                        }
+                        else {
+                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                            dispatchCommand(consoleSender(), "give " + player.getName() + " 162 " + amount);
+
+                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Akazienstämme gekauft!");
                         }
                     }
                     catch (NumberFormatException n) {

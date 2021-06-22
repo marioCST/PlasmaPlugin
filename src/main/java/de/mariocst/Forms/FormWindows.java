@@ -87,10 +87,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " coal " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " coal " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Kohle gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Kohle gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -120,10 +125,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " iron_ingot " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " iron_ingot " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eisen Barren gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eisen Barren gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -153,10 +163,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " gold_ingot " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " gold_ingot " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Gold Barren gekauft gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Gold Barren gekauft gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -186,10 +201,16 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " redstone " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " redstone " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Redstone gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Redstone gekauft!");
+                            }
+
                         }
                     }
                     catch (NumberFormatException n) {
@@ -219,10 +240,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " lapis_lazuli " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " lapis_lazuli " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Lapis Lazuli gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Lapis Lazuli gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -252,10 +278,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " diamond " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " diamond " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Diamanten gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Diamanten gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -285,10 +316,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " emerald " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " emerald " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Smaragde gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Smaragde gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -318,10 +354,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 406 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 406 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Quartz gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Quartz gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -346,9 +387,14 @@ public class FormWindows {
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
 
-                        dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + amount);
+                        if (amount > 128) {
+                            player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                        }
+                        else {
+                            dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + amount);
 
-                        player.sendMessage(MarioMain.getPrefix() + "Du hast " + amount + " Quartz gekauft!");
+                            player.sendMessage(MarioMain.getPrefix() + "Du hast " + amount + " Quartz gekauft!");
+                        }
                     }
                     catch (NumberFormatException n) {
                         n.printStackTrace();
@@ -377,10 +423,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " ancient_debris " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " ancient_debris " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Ancient Debris gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Ancient Debris gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -410,10 +461,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 17 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 17 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eichenstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eichenstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -443,10 +499,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 17:2 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 17:2 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Birkenstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Birkenstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -476,10 +537,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 17:1 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 17:1 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Fichtenstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Fichtenstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -509,10 +575,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 162:1 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 162:1 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Schwarzeichenstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Schwarzeichenstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -542,10 +613,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 17:3 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 17:3 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Dschungelstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Dschungelstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {
@@ -575,10 +651,15 @@ public class FormWindows {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
-                            dispatchCommand(consoleSender(), "give " + player.getName() + " 162 " + amount);
+                            if (amount > 128) {
+                                player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
+                            }
+                            else {
+                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 162 " + amount);
 
-                            player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Akazienstämme gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Akazienstämme gekauft!");
+                            }
                         }
                     }
                     catch (NumberFormatException n) {

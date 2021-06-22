@@ -78,7 +78,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 25 * amount;
+                        long price = 25L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -111,7 +111,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 50 * amount;
+                        long price = 50L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -144,7 +144,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 75 * amount;
+                        long price = 75L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -177,7 +177,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 30 * amount;
+                        long price = 30L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -210,7 +210,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 80 * amount;
+                        long price = 80L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -243,7 +243,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 125 * amount;
+                        long price = 125L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -276,7 +276,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 200 * amount;
+                        long price = 200L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -309,7 +309,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 40 * amount;
+                        long price = 40L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -342,7 +342,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 500 * amount;
+                        long price = 500L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -375,7 +375,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 15 * amount;
+                        long price = 15L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -408,7 +408,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 15 * amount;
+                        long price = 15L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -441,7 +441,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 15 * amount;
+                        long price = 15L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -474,7 +474,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        int price = 15 * amount;
+                        long price = 15L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");

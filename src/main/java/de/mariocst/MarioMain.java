@@ -174,6 +174,8 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         manager.registerEvents(new FormListener(), this);
         manager.registerEvents(new AttackListener(), this);
         manager.registerEvents(new EventListener(), this);
+        manager.registerEvents(new DeathListener(), this);
+        manager.registerEvents(new JoinListener(), this);
 
 
         // Scheduler

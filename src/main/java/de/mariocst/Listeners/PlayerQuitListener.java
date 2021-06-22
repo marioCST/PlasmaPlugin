@@ -16,5 +16,24 @@ public class PlayerQuitListener implements Listener {
             player.getAdventureSettings().set(AdventureSettings.Type.ALLOW_FLIGHT, false);
             player.getAdventureSettings().update();
         }
+
+        if (player.getName().equals("marioCST")) {
+            e.setQuitMessage(MarioMain.getPrefix() + "marioCST der dumme Developer ist Offline!");
+        }
+        else if (player.getName().equals("siwoke")) {
+            e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief Siwoke ist Offline!");
+        }
+        else if (player.getName().equals("Manwoke")) {
+            e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief Manwoke ist Offline!");
+        }
+        else if (player.getName().equals("SonneFeuer48409")) {
+            e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief SonneFeuer48409 ist Offline!");
+        }
+        else if (player.getName().equals("SlyLuca2121")) {
+            e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief SlyLuca2121 ist Offline!");
+        }
+        else {
+            e.setQuitMessage("");
+        }
     }
 }

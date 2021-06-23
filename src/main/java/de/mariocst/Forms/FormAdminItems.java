@@ -43,7 +43,7 @@ public class FormAdminItems {
 
     public void openBarrierMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Barrier")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");
@@ -72,7 +72,7 @@ public class FormAdminItems {
 
     public void openStructureBlockMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Structure Block")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");
@@ -101,7 +101,7 @@ public class FormAdminItems {
 
     public void openStructureVoidMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Structure Void")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");
@@ -130,7 +130,7 @@ public class FormAdminItems {
 
     public void openAllowBlockMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Allow Block")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");
@@ -159,7 +159,7 @@ public class FormAdminItems {
 
     public void openDenyBlockMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Deny Block")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");
@@ -188,7 +188,7 @@ public class FormAdminItems {
 
     public void openBorderBlockMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§6Border Block")
-                .addElement(new ElementInput("Anzahl", player.getName()))
+                .addElement(new ElementInput("Anzahl", "64"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Zahl ein!");

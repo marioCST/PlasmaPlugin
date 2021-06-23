@@ -17,7 +17,7 @@ public class RandListener implements Listener {
         String title = formwindow.getTitle();
         String text = formwindow.getResponse().getClickedButton().getText();
 
-        if (title.equals("§6Rand")) {
+        if (title.equals("§6Plot-Rand")) {
             PlotPlayer p = PlotPlayer.wrap(player);
             Plot plot = p.getCurrentPlot();
             switch (text) {

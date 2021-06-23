@@ -27,6 +27,7 @@ import de.mariocst.Commands.Server.*;
 import de.mariocst.Commands.Others.*;
 import de.mariocst.Commands.World.*;
 import de.mariocst.Config.*;
+import de.mariocst.Forms.FormAdminItems;
 import de.mariocst.Forms.FormListener;
 import de.mariocst.Forms.FormTroll;
 import de.mariocst.Forms.FormWindows;
@@ -55,6 +56,9 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
 
     @Getter
     public FormTroll formTroll;
+
+    @Getter
+    public FormAdminItems formAdminItems;
 
     @Override
     public void onLoad() {
@@ -115,6 +119,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("chatclear", new ChatClearCommand(this));
 
         // Inventory
+        commandMap.register("adminitems", new AdminItemsCommand(this));
         commandMap.register("clear", new ClearInventoryCommand(this));
         commandMap.register("giveitems", new GiveItemsCommand(this));
         commandMap.register("id", new IDCommand(this));
@@ -194,6 +199,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         // Form Windows
         this.formWindows = new FormWindows();
         this.formTroll = new FormTroll();
+        this.formAdminItems = new FormAdminItems();
     }
 
     public static MarioMain getInstance() {

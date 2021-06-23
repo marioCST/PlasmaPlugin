@@ -30,7 +30,7 @@ public class FormWindows {
     }
 
     public void openAdminshop(Player player) {
-        SimpleForm form = new SimpleForm.Builder("§cAdminshop",
+        SimpleForm form = new SimpleForm.Builder("§cAdminshop §6BETA",
                 getNP("", "§aSuch dir eine Kategorie aus!"))
                 .addButton(new ElementButton("§6Erze"), e -> this.openOreMenu(player))
                 .addButton(new ElementButton("§6Holzstämme"), e -> this.openWoodMenu(player))

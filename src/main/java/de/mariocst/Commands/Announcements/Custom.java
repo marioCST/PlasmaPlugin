@@ -29,7 +29,7 @@ public class Custom extends Command {
                     while (schleife1 < 5) {
                         schleife1++;
 
-                        MarioMain.getInstance().getServer().broadcastMessage(MarioMain.getPrefix() + message);
+                        MarioMain.getInstance().getServer().broadcastMessage(MarioMain.getPrefix() + message.replaceAll("&", "§"));
                         MarioMain.getInstance().getServer().broadcastMessage(MarioMain.getPrefix());
                         try {
                             Thread.sleep(500);

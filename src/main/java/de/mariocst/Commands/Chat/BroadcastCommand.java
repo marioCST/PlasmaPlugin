@@ -23,7 +23,7 @@ public class BroadcastCommand extends Command {
             Player player = (Player) sender;
             if (sender.hasPermission("mario.broadcast") || sender.hasPermission("mario.*") || sender.hasPermission("*") || sender.isOp()) {
                 if (args.length > 0) {
-                    MarioMain.getInstance().getServer().broadcastMessage(MarioMain.getPrefix() + message);
+                    MarioMain.getInstance().getServer().broadcastMessage(MarioMain.getPrefix() + message.replaceAll("&", "§"));
                 } else {
                     sender.sendMessage(MarioMain.getPrefix() + "Bitte gib einen Text ein!");
                     player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);

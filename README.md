@@ -23,3 +23,5 @@ idk lol
 [EconomyAPI](https://cloudburstmc.org/resources/economyapi.14/) für den AdminShop
 
 [Lombok](https://projectlombok.org/download) für einen Getter in der Main
+
+[PlotSquared](https://cloudburstmc.org/resources/plotsquared.31/) für /rand und /wand

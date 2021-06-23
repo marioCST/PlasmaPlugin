@@ -25,3 +25,5 @@ idk lol
 [Lombok](https://projectlombok.org/download) für einen Getter in der Main
 
 [PlotSquared](https://cloudburstmc.org/resources/plotsquared.31/) für /rand und /wand
+
+[Mob Plugin](https://cloudburstmc.org/resources/mobplugin.3/) für /troll tnt

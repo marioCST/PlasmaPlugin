@@ -18,7 +18,7 @@ public class WandListener implements Listener {
         String text = formwindow.getResponse().getClickedButton().getText();
 
         if (title.equals("§6Plot-Wand")) {
-                PlotPlayer p = PlotPlayer.wrap(player);
+            PlotPlayer p = PlotPlayer.wrap(player);
             Plot plot = p.getCurrentPlot();
             switch (text) {
                 case "§8Andesit":

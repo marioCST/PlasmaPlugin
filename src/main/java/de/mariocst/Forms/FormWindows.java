@@ -91,7 +91,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " coal " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Kohle gekauft!");
@@ -129,7 +129,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " iron_ingot " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eisen Barren gekauft!");
@@ -167,7 +167,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " gold_ingot " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Gold Barren gekauft gekauft!");
@@ -205,7 +205,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " redstone " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Redstone gekauft!");
@@ -244,7 +244,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " lapis_lazuli " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Lapis Lazuli gekauft!");
@@ -282,7 +282,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " diamond " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Diamanten gekauft!");
@@ -320,7 +320,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " emerald " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Smaragde gekauft!");
@@ -358,7 +358,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 406 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Quartz gekauft!");
@@ -396,7 +396,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Quartzerze gekauft!");
@@ -434,7 +434,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " ancient_debris " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Ancient Debris gekauft!");
@@ -472,7 +472,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 17 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Eichenstämme gekauft!");
@@ -510,7 +510,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 17:2 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Birkenstämme gekauft!");
@@ -548,7 +548,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 17:1 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Fichtenstämme gekauft!");
@@ -586,7 +586,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 162:1 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Schwarzeichenstämme gekauft!");
@@ -624,7 +624,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 17:3 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Dschungelstämme gekauft!");
@@ -662,7 +662,7 @@ public class FormWindows {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
-                                dispatchCommand(consoleSender(), "takemoney " + player.getName() + " " + price);
+                                takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 162 " + amount);
 
                                 player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Akazienstämme gekauft!");
@@ -685,5 +685,9 @@ public class FormWindows {
 
     private ConsoleCommandSender consoleSender() {
         return MarioMain.getInstance().getServer().getConsoleSender();
+    }
+
+    private void takeMoney(Player player, long price) {
+        EconomyAPI.getInstance().reduceMoney(player, price);
     }
 }

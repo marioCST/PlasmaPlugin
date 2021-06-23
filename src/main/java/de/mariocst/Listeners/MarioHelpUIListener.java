@@ -102,6 +102,8 @@ public class MarioHelpUIListener implements Listener {
                 serui.addButton(new ElementButton("/kickall"));
                 serui.addButton(new ElementButton("/lobby"));
                 serui.addButton(new ElementButton("/nether"));
+                serui.addButton(new ElementButton("/rand"));
+                serui.addButton(new ElementButton("/wand"));
                 serui.addButton(new ElementButton("/worldtp"));
                 serui.addButton(new ElementButton("§cZurück"));
 
@@ -604,6 +606,28 @@ public class MarioHelpUIListener implements Listener {
 
                         player.showFormWindow(neui);
                     }
+                    if (button.equals("/rand")) {
+                        final FormWindowSimple raui = new FormWindowSimple("§6/rand", "§6Informationen zu /rand");
+
+                        raui.setContent("§6Usage: /rand\n" +
+                                "§6Description: Öffnet eine UI für ein Plot Rand\n" +
+                                "§6Permission: mario.rand"
+                        );
+                        raui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(raui);
+                    }
+                    if (button.equals("/wand")) {
+                        final FormWindowSimple waui = new FormWindowSimple("§6/wand", "§6Informationen zu /wand");
+
+                        waui.setContent("§6Usage: /wand\n" +
+                                "§6Description: Öffnet eine UI für eine Plot Wand\n" +
+                                "§6Permission: mario.wand"
+                        );
+                        waui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(waui);
+                    }
                     if (button.equals("/worldtp")) {
                         final FormWindowSimple wui = new FormWindowSimple("§6/worldtp", "§6Informationen zu /worldtp");
 
@@ -706,7 +730,8 @@ public class MarioHelpUIListener implements Listener {
                 }
                 if (fws.getTitle().equals("§6/adminshop") || fws.getTitle().equals("§6/cb1") || fws.getTitle().equals("§6/end") ||
                     fws.getTitle().equals("§6/farmwelt") || fws.getTitle().equals("§6/kickall") || fws.getTitle().equals("§6/lobby") ||
-                    fws.getTitle().equals("§6/nether") || fws.getTitle().equals("§6/worldtp")) {
+                    fws.getTitle().equals("§6/nether") || fws.getTitle().equals("/rand") || fws.getTitle().equals("/wand") ||
+                    fws.getTitle().equals("§6/worldtp")) {
                     if (button.equals("§cZurück")) {
                         player.showFormWindow(serui);
                     }

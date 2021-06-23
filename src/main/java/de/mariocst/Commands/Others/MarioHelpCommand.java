@@ -115,6 +115,8 @@ public class MarioHelpCommand extends Command {
                                 player.sendMessage(MarioMain.getPrefix() + "§6/kickall [Nachricht] - Kickt alle Spieler mit einem bestimmten Grund");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/lobby - Teleportiert dich in die Lobby");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/nether - Teleportiert dich in den Nether!");
+                                player.sendMessage(MarioMain.getPrefix() + "§6/rand - Öffnet eine UI für ein Plot Rand");
+                                player.sendMessage(MarioMain.getPrefix() + "§6/wand - Öffnet eine UI für eine Plot Wand");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/worldtp - Öffnet eine UI zum Teleportieren!");
                             }
                             case "10" -> {

@@ -68,7 +68,7 @@ public class FormTroll {
                             MarioMain.unknownPlayer(t);
                         }
                     }
-                    catch (NumberFormatException n) {
+                    catch (NullPointerException n) {
                         n.printStackTrace();
                         MarioMain.unknownPlayer(t);
                     }
@@ -119,7 +119,7 @@ public class FormTroll {
                             MarioMain.unknownPlayer(t);
                         }
                     }
-                    catch (NumberFormatException n) {
+                    catch (NullPointerException n) {
                         n.printStackTrace();
                         MarioMain.unknownPlayer(t);
                     }
@@ -149,7 +149,7 @@ public class FormTroll {
                             MarioMain.unknownPlayer(t);
                         }
                     }
-                    catch (NumberFormatException n) {
+                    catch (NullPointerException n) {
                         n.printStackTrace();
                         MarioMain.unknownPlayer(t);
                     }

@@ -34,6 +34,7 @@ public class QuitListener implements Listener {
         }
         else {
             e.setQuitMessage("");
+            MarioMain.getInstance().log("Der Spieler " + player.getName() + " ist Offline!");
         }
     }
 }

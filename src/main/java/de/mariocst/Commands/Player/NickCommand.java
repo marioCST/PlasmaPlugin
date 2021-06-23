@@ -36,7 +36,7 @@ public class NickCommand extends Command {
                         }
 
                         player.setDisplayName(newNick);
-                        if (!player.hasPermission("mario.nick.bypass") || !player.hasPermission("mario.*") || !player.hasPermission("*") || !player.isOp()) {
+                        if (!player.hasPermission("mario.nick.bypass") && !player.hasPermission("mario.*") && !player.hasPermission("*") && !player.isOp()) {
                             player.setNameTag("(" + player.getName() + ") " + newNick);
                         }
                         else {

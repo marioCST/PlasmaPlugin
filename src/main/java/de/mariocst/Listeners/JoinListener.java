@@ -28,6 +28,7 @@ public class JoinListener implements Listener {
         }
         else {
             event.setJoinMessage("");
+            MarioMain.getInstance().log("Der Spieler " + player.getName() + " ist Online!");
         }
     }
 }

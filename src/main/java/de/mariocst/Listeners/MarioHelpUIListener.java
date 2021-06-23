@@ -65,10 +65,12 @@ public class MarioHelpUIListener implements Listener {
                 plui.addButton(new ElementButton("/getgamemode"));
                 plui.addButton(new ElementButton("/gm"));
                 plui.addButton(new ElementButton("/heal"));
+                plui.addButton(new ElementButton("/nick"));
                 plui.addButton(new ElementButton("/nightvision"));
                 plui.addButton(new ElementButton("/size"));
                 plui.addButton(new ElementButton("/skin"));
                 plui.addButton(new ElementButton("/troll"));
+                plui.addButton(new ElementButton("/unnick"));
                 plui.addButton(new ElementButton("§cZurück"));
 
                 final FormWindowSimple moui = new FormWindowSimple("§6-- Movement --", "§6Bitte wähle einen Command.");
@@ -351,6 +353,17 @@ public class MarioHelpUIListener implements Listener {
 
                         player.showFormWindow(heui);
                     }
+                    if (button.equals("/nick")) {
+                        final FormWindowSimple niui = new FormWindowSimple("§6/nick", "§6Informationen zu /nick");
+
+                        niui.setContent("§6Usage: /nick <Nick>\n" +
+                                "§6Description: Ändert deinen Nickname\n" +
+                                "§6Permission: mario.nick"
+                        );
+                        niui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(niui);
+                    }
                     if (button.equals("/nightvision")) {
                         final FormWindowSimple niui = new FormWindowSimple("§6/nightvision", "§6Informationen zu /nightvision");
 
@@ -394,6 +407,17 @@ public class MarioHelpUIListener implements Listener {
                         trui.addButton(new ElementButton("§cZurück"));
 
                         player.showFormWindow(trui);
+                    }
+                    if (button.equals("/unnick")) {
+                        final FormWindowSimple unui = new FormWindowSimple("§6/unnick", "§6Informationen zu /unnick");
+
+                        unui.setContent("§6Usage: /unnick\n" +
+                                "§6Description: Setzt deinen Nickname zurück\n" +
+                                "§6Permission: mario.unnick"
+                        );
+                        unui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(unui);
                     }
                     if (button.equals("§cZurück")) {
                         player.showFormWindow(mhui);
@@ -656,8 +680,9 @@ public class MarioHelpUIListener implements Listener {
                     }
                 }
                 if (fws.getTitle().equals("§6/die") || fws.getTitle().equals("§6/getgamemode") || fws.getTitle().equals("§6/gm") ||
-                    fws.getTitle().equals("§6/heal") || fws.getTitle().equals("§6/nightvision") || fws.getTitle().equals("§6/size") ||
-                    fws.getTitle().equals("§6/skin") || fws.getTitle().equals("§6/troll")) {
+                    fws.getTitle().equals("§6/heal") || fws.getTitle().equals("§6/nick") || fws.getTitle().equals("§6/nightvision") ||
+                    fws.getTitle().equals("§6/size") || fws.getTitle().equals("§6/skin") || fws.getTitle().equals("§6/troll") ||
+                    fws.getTitle().equals("§6/unnick")) {
                     if (button.equals("§cZurück")) {
                         player.showFormWindow(plui);
                     }

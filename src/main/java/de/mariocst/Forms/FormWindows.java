@@ -48,8 +48,8 @@ public class FormWindows {
                 .addButton(new ElementButton("§1Lapis Lazuli || 80$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/lapis_lazuli.png?token=AQJ2PAPMTR3SFEAT7O2TWPDA2HKM4")), e -> this.openLapisLazuliMenu(player))
                 .addButton(new ElementButton("§bDiamant || 125$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/diamond.png?token=AQJ2PAI34S6WE5YTPDSPATLA2HMUQ")), e -> this.openDiamondMenu(player))
                 .addButton(new ElementButton("§2Smaragd || 200$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/emerald.png?token=AQJ2PAMSUNLELOXFNSOZ7XTA2HMV2")), e -> this.openEmeraldMenu(player))
-                .addButton(new ElementButton("§fQuartz || 40$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/quartz.png?token=AQJ2PAMDBIH7O6HNSHRL2CLA2HJA4")), e -> this.openQuartzMenu(player))
-                .addButton(new ElementButton("§fQuartz Erz || 10$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/nether_quartz_ore.png")), e -> this.openQuartzOreMenu(player))
+                .addButton(new ElementButton("§fQuartz || 20$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/quartz.png?token=AQJ2PAMDBIH7O6HNSHRL2CLA2HJA4")), e -> this.openQuartzMenu(player))
+                .addButton(new ElementButton("§fQuartz Erz || 20$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/nether_quartz_ore.png")), e -> this.openQuartzOreMenu(player))
                 .addButton(new ElementButton("§cAncient Debris || 500$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/ancient_debris_side.png?token=AQJ2PAJMZNJFBDDBZW3RSFTA2HKXU")), e -> this.openAncientDebrisMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
@@ -348,7 +348,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        long price = 40L * amount;
+                        long price = 20L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
@@ -386,7 +386,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        long price = 200L * amount;
+                        long price = 20L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");

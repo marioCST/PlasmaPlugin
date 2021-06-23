@@ -158,6 +158,8 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("kickall", new KickAllCommand(this));
         commandMap.register("lobby", new LobbyCommand(this));
         commandMap.register("nether", new NetherCommand(this));
+        commandMap.register("rand", new RandCommand(this));
+        commandMap.register("wand", new WandCommand(this));
         commandMap.register("worldtp", new WorldTPCommand(this));
 
         // World
@@ -175,6 +177,8 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         manager.registerEvents(new InventoryListener(), this);
         manager.registerEvents(new MarioHelpUIListener(), this);
         manager.registerEvents(new CoordinatesListener(), this);
+        manager.registerEvents(new RandListener(), this);
+        manager.registerEvents(new WandListener(), this);
         manager.registerEvents(new FormListener(), this);
         manager.registerEvents(new EventListener(), this);
         manager.registerEvents(new DeathListener(), this);

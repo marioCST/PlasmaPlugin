@@ -14,7 +14,7 @@ import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.level.Location;
 import de.mariocst.MarioMain;
 
-public class InventoryListener implements Listener {
+public class UIListener implements Listener {
     @EventHandler
     public void onResponse(final PlayerFormRespondedEvent event) {
         if (event.getWindow() instanceof FormWindowSimple) {

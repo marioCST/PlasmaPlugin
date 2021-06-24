@@ -78,6 +78,7 @@ public class MarioHelpCommand extends Command {
                                 player.sendMessage(MarioMain.getPrefix() + "§6/getgamemode <Spieler> - Lässt dich wissen, welchen Gamemode ein Spieler hat");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/gm [Gamemode] [Spieler] - Abkürzung für /gamemode");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/heal [Spieler] - Heilt und sättigt dich");
+                                player.sendMessage(MarioMain.getPrefix() + "§6/near - Schreibt dir die Spieler in deiner Nähe!");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/nick <Nick> - Ändert deinen Nickname");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/nightvision [Spieler] - Gibt dir Nightvision");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/size [Größe] - Lässt dich größer oder kleiner werden");

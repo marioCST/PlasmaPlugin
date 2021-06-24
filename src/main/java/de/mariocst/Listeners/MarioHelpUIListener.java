@@ -65,6 +65,7 @@ public class MarioHelpUIListener implements Listener {
                 plui.addButton(new ElementButton("/getgamemode"));
                 plui.addButton(new ElementButton("/gm"));
                 plui.addButton(new ElementButton("/heal"));
+                plui.addButton(new ElementButton("/near"));
                 plui.addButton(new ElementButton("/nick"));
                 plui.addButton(new ElementButton("/nightvision"));
                 plui.addButton(new ElementButton("/size"));
@@ -354,6 +355,17 @@ public class MarioHelpUIListener implements Listener {
                         heui.addButton(new ElementButton("§cZurück"));
 
                         player.showFormWindow(heui);
+                    }
+                    if (button.equals("/near")) {
+                        final FormWindowSimple neui = new FormWindowSimple("§6/near", "§6Informationen zu /near");
+
+                        neui.setContent("§6Usage: /near\n" +
+                                "§6Description: Schreibt dir die Spieler in deiner Nähe!\n" +
+                                "§6Permission: mario.near"
+                        );
+                        neui.addButton(new ElementButton("§cZurück"));
+
+                        player.showFormWindow(neui);
                     }
                     if (button.equals("/nick")) {
                         final FormWindowSimple niui = new FormWindowSimple("§6/nick", "§6Informationen zu /nick");
@@ -704,9 +716,9 @@ public class MarioHelpUIListener implements Listener {
                     }
                 }
                 if (fws.getTitle().equals("§6/die") || fws.getTitle().equals("§6/getgamemode") || fws.getTitle().equals("§6/gm") ||
-                    fws.getTitle().equals("§6/heal") || fws.getTitle().equals("§6/nick") || fws.getTitle().equals("§6/nightvision") ||
-                    fws.getTitle().equals("§6/size") || fws.getTitle().equals("§6/skin") || fws.getTitle().equals("§6/troll") ||
-                    fws.getTitle().equals("§6/unnick")) {
+                    fws.getTitle().equals("§6/heal") || fws.getTitle().equals("§6/near") || fws.getTitle().equals("§6/nick") ||
+                    fws.getTitle().equals("§6/nightvision") || fws.getTitle().equals("§6/size") || fws.getTitle().equals("§6/skin") ||
+                    fws.getTitle().equals("§6/troll") || fws.getTitle().equals("§6/unnick")) {
                     if (button.equals("§cZurück")) {
                         player.showFormWindow(plui);
                     }

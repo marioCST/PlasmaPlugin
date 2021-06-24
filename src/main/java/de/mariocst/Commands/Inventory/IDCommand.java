@@ -21,7 +21,7 @@ public class IDCommand extends Command {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(player.hasPermission("mario.id") || sender.hasPermission("mario.*") || sender.hasPermission("*") || sender.isOp()) {
-                player.sendMessage(MarioMain.getPrefix() + "ID: " + player.getInventory().getItemInHand().getId());
+                player.sendMessage(MarioMain.getPrefix() + "ID: " + player.getInventory().getItemInHand().getId() + ":" + player.getInventory().getItemInHand().getDamage());
             } else {
                 player.sendMessage(MarioMain.getPrefix() + "Keine Rechte!");
                 player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);

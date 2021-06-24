@@ -64,12 +64,12 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         register();
         initConfig();
 
-        log("Plasma PlugIn geladen!");
+        log("Plasma Plugin geladen!");
     }
 
     @Override
     public void onDisable() {
-        log("Plasma PlugIn entladen!");
+        log("Plasma Plugin entladen!");
     }
 
     public void log(String text) {

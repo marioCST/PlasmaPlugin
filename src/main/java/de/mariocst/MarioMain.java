@@ -133,6 +133,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("getgamemode", new GetGamemodeCommand(this));
         commandMap.register("gm", new GMCommand(this));
         commandMap.register("heal", new HealCommand(this));
+        commandMap.register("near", new NearCommand(this));
         commandMap.register("nick", new NickCommand(this));
         commandMap.register("nightvision", new NightvisionCommand(this));
         commandMap.register("size", new SizeCommand(this));

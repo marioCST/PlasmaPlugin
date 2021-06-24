@@ -34,9 +34,7 @@ import de.mariocst.Forms.FormWindows;
 import de.mariocst.Listeners.*;
 import lombok.Getter;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class MarioMain extends PluginBase implements AntiCheatAPI {
     private static MarioMain instance;
@@ -173,21 +171,21 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("night", new NightCommand(this));
 
 
-        // Plugin Manager
+        // Events/Listener
         PluginManager manager = this.getServer().getPluginManager();
 
-        manager.registerEvents(new QuitListener(), this);
-        manager.registerEvents(new HungerListener(), this);
         manager.registerEvents(new AchievementListener(), this);
-        manager.registerEvents(new InventoryListener(), this);
-        manager.registerEvents(new MarioHelpUIListener(), this);
         manager.registerEvents(new CoordinatesListener(), this);
-        manager.registerEvents(new RandListener(), this);
-        manager.registerEvents(new WandListener(), this);
-        manager.registerEvents(new FormListener(), this);
-        manager.registerEvents(new EventListener(), this);
         manager.registerEvents(new DeathListener(), this);
+        manager.registerEvents(new EventListener(), this);
+        manager.registerEvents(new FormListener(), this);
+        manager.registerEvents(new HungerListener(), this);
         manager.registerEvents(new JoinListener(), this);
+        manager.registerEvents(new MarioHelpUIListener(), this);
+        manager.registerEvents(new QuitListener(), this);
+        manager.registerEvents(new RandListener(), this);
+        manager.registerEvents(new UIListener(), this);
+        manager.registerEvents(new WandListener(), this);
 
 
         // Scheduler

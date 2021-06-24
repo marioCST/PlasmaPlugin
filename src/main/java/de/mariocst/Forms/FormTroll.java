@@ -142,14 +142,9 @@ public class FormTroll {
 
                     try {
                         if (t != null) {
-                            if (MarioMain.getInstance().getServer().getPluginManager().getPlugin("MobPlugin") != null) {
-                                dispatchCommand(consoleSender(), "summon primed_tnt " + t.getName());
+                            dispatchCommand(consoleSender(), "summon primed_tnt " + t.getName());
 
-                                player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
-                            }
-                            else {
-                                player.sendMessage(MarioMain.getPrefix() + "MobPlugin ist nicht installiert! TNT geht leider nicht");
-                            }
+                            player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
                         }
                         else {
                             MarioMain.unknownPlayer(t);

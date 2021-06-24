@@ -83,14 +83,9 @@ public class TrollCommand extends Command {
                                         }
                                     }
                                     case "tnt" -> {
-                                        if (MarioMain.getInstance().getServer().getPluginManager().getPlugin("MobPlugin") != null) {
-                                            MarioMain.getInstance().getServer().dispatchCommand(MarioMain.getInstance().getServer().getConsoleSender(), "summon primed_tnt " + t.getName());
+                                        MarioMain.getInstance().getServer().dispatchCommand(MarioMain.getInstance().getServer().getConsoleSender(), "summon primed_tnt " + t.getName());
 
-                                            player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
-                                        }
-                                        else {
-                                            player.sendMessage(MarioMain.getPrefix() + "Das Plugin MobPlugin ist nicht installiert! Deshalb geht /troll tnt <Spieler> leider nicht!");
-                                        }
+                                        player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
                                     }
                                     case "pumpkin", "pk", "jumpscare", "js" -> {
                                         if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {
@@ -179,14 +174,9 @@ public class TrollCommand extends Command {
                                     }
                                 }
                                 case "tnt" -> {
-                                    if (MarioMain.getInstance().getServer().getPluginManager().getPlugin("MobPlugin") != null) {
-                                        MarioMain.getInstance().getServer().dispatchCommand(MarioMain.getInstance().getServer().getConsoleSender(), "summon primed_tnt " + t.getName());
+                                    MarioMain.getInstance().getServer().dispatchCommand(MarioMain.getInstance().getServer().getConsoleSender(), "summon primed_tnt " + t.getName());
 
-                                        sender.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
-                                    }
-                                    else {
-                                        MarioMain.getInstance().getLogger().critical("MobPlugin wurde nicht gefunden! /troll tnt <Spieler> geht leider nicht!");
-                                    }
+                                    sender.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
                                 }
                                 case "pumpkin", "pk", "jumpscare", "js" -> {
                                     if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {

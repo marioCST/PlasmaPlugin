@@ -124,7 +124,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
             commandMap.register("invsee", new InvseeCommand(this));
         }
         else {
-            critical("Plugin \"FakeInventories\" wurde nicht gefunden! Invsee wird deaktiviert!");
+            critical("Plugin \"FakeInventories\" wurde nicht gefunden! Invsee wird deaktiviert! Download: https://ci.opencollab.dev//job/NukkitX/job/FakeInventories/job/master/");
         }
         commandMap.register("tnt", new TNTCommand(this));
 
@@ -163,7 +163,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
             commandMap.register("adminshop", new AdminshopCommand(this));
         }
         else {
-            critical("Plugin \"EconomyAPI\" wurde nicht gefunden! Der Adminshop wird deaktiviert!");
+            critical("Plugin \"EconomyAPI\" wurde nicht gefunden! Der Adminshop wird deaktiviert! Download: https://cloudburstmc.org/resources/economyapi.14/");
         }
         commandMap.register("cb1", new CB1Command(this));
         commandMap.register("end", new EndCommand(this));
@@ -176,7 +176,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
             commandMap.register("wand", new WandCommand(this));
         }
         else {
-            critical("Plugin \"PlotSquared\" wurde nicht gefunden! Rand und Wand wird deaktiviert!");
+            critical("Plugin \"PlotSquared\" wurde nicht gefunden! Rand und Wand wird deaktiviert! Download: https://cloudburstmc.org/resources/plotsquared.31/");
         }
         commandMap.register("worldtp", new WorldTPCommand(this));
 
@@ -220,7 +220,7 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         this.formTroll = new FormTroll();
 
         if (this.getServer().getPluginManager().getPlugin("MobPlugin") == null) {
-            critical("Plugin \"MobPlugin\" wurde nicht gefunden! Troll im Modus TNT wird deaktiviert!");
+            critical("Plugin \"MobPlugin\" wurde nicht gefunden! Troll im Modus TNT wird deaktiviert! Download: https://cloudburstmc.org/resources/mobplugin.3/");
         }
     }
 

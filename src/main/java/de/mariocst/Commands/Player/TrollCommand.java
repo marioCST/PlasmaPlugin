@@ -87,8 +87,18 @@ public class TrollCommand extends Command {
 
                                         player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
                                     }
+                                    case "pumpkin", "pk", "jumpscare", "js" -> {
+                                        if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {
+                                            player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
+                                        }
+                                        else {
+                                            t.getInventory().setItem(36, Item.get(BlockID.CARVED_PUMPKIN));
+
+                                            player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
+                                        }
+                                    }
                                     default -> {
-                                        player.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt> <Spieler>!");
+                                        player.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt|pumpkin> <Spieler>!");
                                         player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
                                     }
                                 }
@@ -168,8 +178,18 @@ public class TrollCommand extends Command {
 
                                     sender.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
                                 }
+                                case "pumpkin", "pk", "jumpscare", "js" -> {
+                                    if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {
+                                        sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
+                                    }
+                                    else {
+                                        t.getInventory().setItem(36, Item.get(BlockID.CARVED_PUMPKIN));
+
+                                        sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
+                                    }
+                                }
                                 default -> {
-                                    sender.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt> <Spieler>!");
+                                    sender.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt|pumpkin> <Spieler>!");
                                 }
                             }
                         }

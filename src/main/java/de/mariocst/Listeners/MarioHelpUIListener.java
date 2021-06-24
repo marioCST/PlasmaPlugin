@@ -402,7 +402,7 @@ public class MarioHelpUIListener implements Listener {
                     if (button.equals("/troll")) {
                         final FormWindowSimple trui = new FormWindowSimple("§6/troll", "§6Informationen zu /troll");
 
-                        trui.setContent("§6Usage: /troll <drop|damage|tnt> <Spieler>\n" +
+                        trui.setContent("§6Usage: /troll <drop|damage|tnt|pumpkin> <Spieler>\n" +
                                 "§6Description: Trolle jemanden!\n" +
                                 "§6Permission: mario.troll"
                         );

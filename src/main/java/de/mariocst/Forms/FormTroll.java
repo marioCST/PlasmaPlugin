@@ -38,6 +38,7 @@ public class FormTroll {
                 .addButton(new ElementButton("§6Item Drop", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/itemphysics.png")), e -> this.openItemDropMenu(player))
                 .addButton(new ElementButton("§6Damage", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/hitcolor.png")), e -> this.openDamageMenu(player))
                 .addButton(new ElementButton("§6TNT", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/tnt_side.png")), e -> this.openTNTMenu(player))
+                .addButton(new ElementButton("§6Pumpkin", new ElementButtonImageData("path", "textures/blocks/pumpkin_face_off.png")), e -> this.openPumpkinMenu(player))
                 .build();
         form.send(player);
     }
@@ -144,6 +145,41 @@ public class FormTroll {
                             dispatchCommand(consoleSender(), "summon primed_tnt " + t.getName());
 
                             player.sendMessage(MarioMain.getPrefix() + "TNT bei " + t.getName() + " gespawnt!");
+                        }
+                        else {
+                            MarioMain.unknownPlayer(t);
+                        }
+                    }
+                    catch (NullPointerException n) {
+                        n.printStackTrace();
+                        MarioMain.unknownPlayer(t);
+                    }
+                })
+                .build();
+        form.send(player);
+    }
+
+    public void openPumpkinMenu(Player player) {
+        CustomForm form = new CustomForm.Builder("§6Pumpkin")
+                .addElement(new ElementInput("Spieler", player.getName()))
+                .onSubmit((e, r) -> {
+                    if (r.getInputResponse(0).isEmpty()) {
+                        player.sendMessage(MarioMain.getPrefix() + "Bitte gib einen Spieler Namen ein!");
+                        player.getLevel().addSound(player.getLocation(), Sound.RANDOM_ANVIL_LAND);
+                    }
+
+                    Player t = MarioMain.getInstance().getServer().getPlayer(r.getInputResponse(0).replaceAll("_", " ").replaceAll("\"", ""));
+
+                    try {
+                        if (t != null) {
+                            if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {
+                                player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
+                            }
+                            else {
+                                t.getInventory().setItem(36, Item.get(BlockID.CARVED_PUMPKIN));
+
+                                player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
+                            }
                         }
                         else {
                             MarioMain.unknownPlayer(t);

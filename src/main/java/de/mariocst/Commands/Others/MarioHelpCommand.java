@@ -82,7 +82,7 @@ public class MarioHelpCommand extends Command {
                                 player.sendMessage(MarioMain.getPrefix() + "§6/nightvision [Spieler] - Gibt dir Nightvision");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/size [Größe] - Lässt dich größer oder kleiner werden");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/skin <Spieler> - Übernehme den Skin eines anderen Spielers!");
-                                player.sendMessage(MarioMain.getPrefix() + "§6/troll <drop|damage|tnt> <Spieler> - Trolle jemanden!");
+                                player.sendMessage(MarioMain.getPrefix() + "§6/troll <drop|damage|tnt|pumpkin> <Spieler> - Trolle jemanden!");
                                 player.sendMessage(MarioMain.getPrefix() + "§6/unnick - Setzt deinen Nickname zurück");
                             }
                             case "6" -> {

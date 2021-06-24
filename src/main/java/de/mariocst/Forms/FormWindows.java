@@ -41,16 +41,16 @@ public class FormWindows {
     public void openOreMenu(Player player) {
         SimpleForm form = new SimpleForm.Builder("§cErze",
                 getNP("", "§aSuch dir ein Erz aus!"))
-                .addButton(new ElementButton("§0Kohle || 25$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/coal.png?token=AQJ2PAJ27VRNV4AVZG7ZJADA2HEHG")), e -> this.openCoalMenu(player))
-                .addButton(new ElementButton("§fEisen Barren || 50$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/iron_ingot.png?token=AQJ2PANEVKY3QQTU3322NG3A2HKMA")), e -> this.openIronIngotMenu(player))
-                .addButton(new ElementButton("§eGold Barren || 75$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/gold_ingot.png?token=AQJ2PALWLYTP6QXMU6JYMNTA2HMWY")), e -> this.openGoldIngotMenu(player))
-                .addButton(new ElementButton("§4Redstone || 30$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/redstone.png?token=AQJ2PAP524WGNHAWMFTLLNTA2HKN2")), e -> this.openRedstoneMenu(player))
-                .addButton(new ElementButton("§1Lapis Lazuli || 80$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/lapis_lazuli.png?token=AQJ2PAPMTR3SFEAT7O2TWPDA2HKM4")), e -> this.openLapisLazuliMenu(player))
-                .addButton(new ElementButton("§bDiamant || 125$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/diamond.png?token=AQJ2PAI34S6WE5YTPDSPATLA2HMUQ")), e -> this.openDiamondMenu(player))
-                .addButton(new ElementButton("§2Smaragd || 200$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/emerald.png?token=AQJ2PAMSUNLELOXFNSOZ7XTA2HMV2")), e -> this.openEmeraldMenu(player))
-                .addButton(new ElementButton("§fQuartz || 20$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/quartz.png?token=AQJ2PAMDBIH7O6HNSHRL2CLA2HJA4")), e -> this.openQuartzMenu(player))
-                .addButton(new ElementButton("§fQuartz Erz || 20$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/nether_quartz_ore.png")), e -> this.openQuartzOreMenu(player))
-                .addButton(new ElementButton("§cAncient Debris || 500$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/ancient_debris_side.png?token=AQJ2PAJMZNJFBDDBZW3RSFTA2HKXU")), e -> this.openAncientDebrisMenu(player))
+                .addButton(new ElementButton("§0Kohle || 25$", new ElementButtonImageData("path", "textures/items/coal.png")), e -> this.openCoalMenu(player))
+                .addButton(new ElementButton("§fEisen Barren || 50$", new ElementButtonImageData("path", "textures/items/iron_ingot.png")), e -> this.openIronIngotMenu(player))
+                .addButton(new ElementButton("§eGold Barren || 75$", new ElementButtonImageData("path", "textures/items/gold_ingot.png")), e -> this.openGoldIngotMenu(player))
+                .addButton(new ElementButton("§4Redstone || 30$", new ElementButtonImageData("path", "textures/items/redstone_dust.png")), e -> this.openRedstoneMenu(player))
+                .addButton(new ElementButton("§1Lapis Lazuli || 80$", new ElementButtonImageData("path", "textures/items/dye_powder_blue.png")), e -> this.openLapisLazuliMenu(player))
+                .addButton(new ElementButton("§bDiamant || 125$", new ElementButtonImageData("path", "textures/items/diamond.png")), e -> this.openDiamondMenu(player))
+                .addButton(new ElementButton("§2Smaragd || 200$", new ElementButtonImageData("path", "textures/items/emerald.png")), e -> this.openEmeraldMenu(player))
+                .addButton(new ElementButton("§fQuartz || 20$", new ElementButtonImageData("path", "textures/items/quartz.png")), e -> this.openQuartzMenu(player))
+                .addButton(new ElementButton("§fQuartz Erz || 20$", new ElementButtonImageData("path", "textures/blocks/quartz_ore.png")), e -> this.openQuartzOreMenu(player))
+                .addButton(new ElementButton("§cAncient Debris || 500$", new ElementButtonImageData("path", "textures/blocks/ancient_debris_side.png")), e -> this.openAncientDebrisMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
         form.send(player);
@@ -59,12 +59,12 @@ public class FormWindows {
     public void openWoodMenu(Player player) {
         SimpleForm form = new SimpleForm.Builder("§cStämme",
                 getNP("", "§aSuch dir ein Holz aus!"))
-                .addButton(new ElementButton("§6Eiche || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/oak_log.png?token=AQJ2PALUILLOLKCFWHWNKQLA2HFNC")), e -> this.openOakMenu(player))
-                .addButton(new ElementButton("§6Birke || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/birch_log.png?token=AQJ2PANOWDRPFDGLNMUG5ULA2HFKS")), e -> this.openBirchMenu(player))
-                .addButton(new ElementButton("§6Fichte || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/spruce_log.png?token=AQJ2PAJRHAZ5TCRFLMC3Z63A2HFOI")), e -> this.openSpruceMenu(player))
-                .addButton(new ElementButton("§6Schawrzeiche || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/dark_oak_log.png")), e -> this.openDarkOakMenu(player))
-                .addButton(new ElementButton("§6Dschungel || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/jungle_log.png?token=AQJ2PAJLDJVYHCXUEVPUNS3A2HFL2")), e -> this.openJungleMenu(player))
-                .addButton(new ElementButton("§6Akazie || 15$", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/acacia_log.png")), e -> this.openAcaciaMenu(player))
+                .addButton(new ElementButton("§6Eiche || 15$", new ElementButtonImageData("path", "textures/blocks/log_oak.png")), e -> this.openOakMenu(player))
+                .addButton(new ElementButton("§6Birke || 15$", new ElementButtonImageData("path", "textures/blocks/log_birch.png")), e -> this.openBirchMenu(player))
+                .addButton(new ElementButton("§6Fichte || 15$", new ElementButtonImageData("path", "textures/blocks/log_spruce.png")), e -> this.openSpruceMenu(player))
+                .addButton(new ElementButton("§6Schawrzeiche || 15$", new ElementButtonImageData("path", "textures/blocks/log_big_oak.png")), e -> this.openDarkOakMenu(player))
+                .addButton(new ElementButton("§6Dschungel || 15$", new ElementButtonImageData("path", "textures/blocks/log_jungle.png")), e -> this.openJungleMenu(player))
+                .addButton(new ElementButton("§6Akazie || 15$", new ElementButtonImageData("path", "textures/blocks/log_acacia.png")), e -> this.openAcaciaMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
         form.send(player);

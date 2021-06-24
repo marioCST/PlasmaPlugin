@@ -37,7 +37,7 @@ public class FormTroll {
                 getNP("", "§aSuch dir eine Kategorie aus!"))
                 .addButton(new ElementButton("§6Item Drop", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/itemphysics.png")), e -> this.openItemDropMenu(player))
                 .addButton(new ElementButton("§6Damage", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/hitcolor.png")), e -> this.openDamageMenu(player))
-                .addButton(new ElementButton("§6TNT", new ElementButtonImageData("url", "https://raw.githubusercontent.com/marioCST/PlasmaTextures/main/tnt_side.png")), e -> this.openTNTMenu(player))
+                .addButton(new ElementButton("§6TNT", new ElementButtonImageData("path", "textures/blocks/tnt_side.png")), e -> this.openTNTMenu(player))
                 .addButton(new ElementButton("§6Pumpkin", new ElementButtonImageData("path", "textures/blocks/pumpkin_face_off.png")), e -> this.openPumpkinMenu(player))
                 .build();
         form.send(player);

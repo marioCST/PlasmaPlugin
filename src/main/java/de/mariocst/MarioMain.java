@@ -76,6 +76,10 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         getLogger().info(getPrefix() + text);
     }
 
+    public void critical(String text) {
+        getLogger().critical(getPrefix() + text);
+    }
+
     private void initConfig() {
         Config c = new Config(this.getDataFolder() + "/config.yml", Config.YAML);
         masterConfig = new MasterConfig(c.getRootSection());
@@ -116,7 +120,12 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("clear", new ClearInventoryCommand(this));
         commandMap.register("giveitems", new GiveItemsCommand(this));
         commandMap.register("id", new IDCommand(this));
-        commandMap.register("invsee", new InvseeCommand(this));
+        if (this.getServer().getPluginManager().getPlugin("FakeInventories") != null) {
+            commandMap.register("invsee", new InvseeCommand(this));
+        }
+        else {
+            critical("Plugin \"FakeInventories\" wurde nicht gefunden! Invsee wird deaktiviert!");
+        }
         commandMap.register("tnt", new TNTCommand(this));
 
         // Others
@@ -150,15 +159,25 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         commandMap.register("sendtitle", new SendTitleCommand(this));
 
         // Server
-        commandMap.register("adminshop", new AdminshopCommand(this));
+        if (this.getServer().getPluginManager().getPlugin("EconomyAPI") != null) {
+            commandMap.register("adminshop", new AdminshopCommand(this));
+        }
+        else {
+            critical("Plugin \"EconomyAPI\" wurde nicht gefunden! Der Adminshop wird deaktiviert!");
+        }
         commandMap.register("cb1", new CB1Command(this));
         commandMap.register("end", new EndCommand(this));
         commandMap.register("farmwelt", new FarmweltCommand(this));
         commandMap.register("kickall", new KickAllCommand(this));
         commandMap.register("lobby", new LobbyCommand(this));
         commandMap.register("nether", new NetherCommand(this));
-        commandMap.register("rand", new RandCommand(this));
-        commandMap.register("wand", new WandCommand(this));
+        if (this.getServer().getPluginManager().getPlugin("PlotSquared") != null) {
+            commandMap.register("rand", new RandCommand(this));
+            commandMap.register("wand", new WandCommand(this));
+        }
+        else {
+            critical("Plugin \"PlotSquared\" wurde nicht gefunden! Rand und Wand wird deaktiviert!");
+        }
         commandMap.register("worldtp", new WorldTPCommand(this));
 
         // World
@@ -180,9 +199,12 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         manager.registerEvents(new JoinListener(), this);
         manager.registerEvents(new MarioHelpUIListener(), this);
         manager.registerEvents(new QuitListener(), this);
-        manager.registerEvents(new RandListener(), this);
         manager.registerEvents(new UIListener(), this);
-        manager.registerEvents(new WandListener(), this);
+
+        if (this.getServer().getPluginManager().getPlugin("PlotSquared") != null) {
+            manager.registerEvents(new RandListener(), this);
+            manager.registerEvents(new WandListener(), this);
+        }
 
 
         // Scheduler
@@ -192,7 +214,9 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
 
 
         // Form Windows
-        this.formWindows = new FormWindows();
+        if (this.getServer().getPluginManager().getPlugin("EconomyAPI") != null) {
+            this.formWindows = new FormWindows();
+        }
         this.formTroll = new FormTroll();
     }
 

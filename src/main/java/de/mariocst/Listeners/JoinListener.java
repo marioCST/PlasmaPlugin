@@ -17,7 +17,7 @@ public class JoinListener implements Listener {
         else if (player.getName().equals("siwoke")) {
             event.setJoinMessage(MarioMain.getPrefix() + "Der !Chief Siwoke ist Online!");
         }
-        else if (player.getName().equals("Manwoke")) {
+        else if (player.getName().equals("manwoke")) {
             event.setJoinMessage(MarioMain.getPrefix() + "Der !Chief Manwoke ist Online!");
         }
         else if (player.getName().equals("SonneFeuer48409")) {

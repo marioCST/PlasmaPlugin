@@ -23,7 +23,7 @@ public class QuitListener implements Listener {
         else if (player.getName().equals("siwoke")) {
             e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief Siwoke ist Offline!");
         }
-        else if (player.getName().equals("Manwoke")) {
+        else if (player.getName().equals("manwoke")) {
             e.setQuitMessage(MarioMain.getPrefix() + "Der !Chief Manwoke ist Offline!");
         }
         else if (player.getName().equals("SonneFeuer48409")) {

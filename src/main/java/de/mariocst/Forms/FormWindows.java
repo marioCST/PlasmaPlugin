@@ -49,7 +49,7 @@ public class FormWindows {
                 .addButton(new ElementButton("§bDiamant || 125$", new ElementButtonImageData("path", "textures/items/diamond.png")), e -> this.openDiamondMenu(player))
                 .addButton(new ElementButton("§2Smaragd || 200$", new ElementButtonImageData("path", "textures/items/emerald.png")), e -> this.openEmeraldMenu(player))
                 .addButton(new ElementButton("§fQuartz || 20$", new ElementButtonImageData("path", "textures/items/quartz.png")), e -> this.openQuartzMenu(player))
-                .addButton(new ElementButton("§fQuartz Erz || 20$", new ElementButtonImageData("path", "textures/blocks/quartz_ore.png")), e -> this.openQuartzOreMenu(player))
+                .addButton(new ElementButton("§fQuartz Erz || 5$", new ElementButtonImageData("path", "textures/blocks/quartz_ore.png")), e -> this.openQuartzOreMenu(player))
                 .addButton(new ElementButton("§cAncient Debris || 500$", new ElementButtonImageData("path", "textures/blocks/ancient_debris_side.png")), e -> this.openAncientDebrisMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
@@ -386,7 +386,7 @@ public class FormWindows {
 
                     try {
                         int amount =Integer.parseInt(r.getInputResponse(0));
-                        long price = 20L * amount;
+                        long price = 5L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");

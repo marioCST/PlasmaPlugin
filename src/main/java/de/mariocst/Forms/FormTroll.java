@@ -177,7 +177,7 @@ public class FormTroll {
 
                     try {
                         if (t != null) {
-                            if (t.getInventory().getHelmet() != Item.get(BlockID.AIR)) {
+                            if (t.getInventory().getHelmet() != Item.get(0)) {
                                 player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
                             }
                             else {

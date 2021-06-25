@@ -189,7 +189,7 @@ public class TrollCommand extends Command {
                                     }
                                 }
                                 case "pumpkin", "pk", "jumpscare", "js" -> {
-                                    if (t.getInventory().getHelmet() != Item.get(BlockID.AIR)) {
+                                    if (t.getInventory().getHelmet() != Item.get(0)) {
                                         sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
                                     }
                                     else {

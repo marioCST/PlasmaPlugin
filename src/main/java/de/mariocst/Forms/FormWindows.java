@@ -49,7 +49,7 @@ public class FormWindows {
                 .addButton(new ElementButton("§bDiamant || 125$", new ElementButtonImageData("path", "textures/items/diamond.png")), e -> this.openDiamondMenu(player))
                 .addButton(new ElementButton("§2Smaragd || 200$", new ElementButtonImageData("path", "textures/items/emerald.png")), e -> this.openEmeraldMenu(player))
                 .addButton(new ElementButton("§fQuartz || 20$", new ElementButtonImageData("path", "textures/items/quartz.png")), e -> this.openQuartzMenu(player))
-                .addButton(new ElementButton("§fQuartz Erz || 5$", new ElementButtonImageData("path", "textures/blocks/quartz_ore.png")), e -> this.openQuartzOreMenu(player))
+                .addButton(new ElementButton("§fQuartz Erz || 7$ pro Stack", new ElementButtonImageData("path", "textures/blocks/quartz_ore.png")), e -> this.openQuartzOreMenu(player))
                 .addButton(new ElementButton("§cAncient Debris || 500$", new ElementButtonImageData("path", "textures/blocks/ancient_debris_side.png")), e -> this.openAncientDebrisMenu(player))
                 .addButton(new ElementButton("§cZurück"), e -> this.openAdminshop(player))
                 .build();
@@ -377,7 +377,7 @@ public class FormWindows {
 
     public void openQuartzOreMenu(Player player) {
         CustomForm form = new CustomForm.Builder("§fQuartz Erz")
-                .addElement(new ElementInput("Anzahl", "64"))
+                .addElement(new ElementInput("Anzahl pro Stack", "1"))
                 .onSubmit((e, r) -> {
                     if (r.getInputResponse(0).isEmpty()) {
                         player.sendMessage(MarioMain.getPrefix() + "Bitte gib eine Menge ein!");
@@ -385,21 +385,21 @@ public class FormWindows {
                     }
 
                     try {
-                        int amount =Integer.parseInt(r.getInputResponse(0));
-                        long price = 5L * amount;
+                        int amount = Integer.parseInt(r.getInputResponse(0));
+                        long price = 7L * amount;
 
                         if (EconomyAPI.getInstance().myMoney(player) < price) {
                             player.sendMessage(MarioMain.getPrefix() + "Du hast nicht genügend Geld! Du brauchst: " + price + "$!");
                         }
                         else {
-                            if (amount > 128) {
+                            if (amount > 4) {
                                 player.sendMessage(MarioMain.getPrefix() + "Bitte wähle eine kleinere Zahl!");
                             }
                             else {
                                 takeMoney(player, price);
-                                dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + amount);
+                                dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + (amount * 64));
 
-                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Quartzerze gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + (amount * 64) + " Quartzerze gekauft!");
                             }
                         }
                     }

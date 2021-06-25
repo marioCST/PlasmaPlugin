@@ -189,18 +189,11 @@ public class TrollCommand extends Command {
                                     }
                                 }
                                 case "pumpkin", "pk", "jumpscare", "js" -> {
-                                    if (t.getInventory().getHelmet() != Item.get(0)) {
-                                        sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
-                                    }
-                                    else {
-                                        t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
+                                    t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
 
-                                        sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
-                                    }
+                                    sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
                                 }
-                                default -> {
-                                    sender.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt|pumpkin> <Spieler>!");
-                                }
+                                default -> sender.sendMessage(MarioMain.getPrefix() + "/troll <drop|damage|tnt|pumpkin> <Spieler>!");
                             }
                         }
                         else {

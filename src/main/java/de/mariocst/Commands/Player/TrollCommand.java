@@ -93,7 +93,7 @@ public class TrollCommand extends Command {
                                         }
                                     }
                                     case "pumpkin", "pk", "jumpscare", "js" -> {
-                                        t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
+                                        t.getInventory().setHelmet(Item.get(-155));
 
                                         player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
                                     }
@@ -184,7 +184,7 @@ public class TrollCommand extends Command {
                                     }
                                 }
                                 case "pumpkin", "pk", "jumpscare", "js" -> {
-                                    t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
+                                    t.getInventory().setHelmet(Item.get(-155));
 
                                     sender.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
                                 }

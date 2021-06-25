@@ -177,7 +177,7 @@ public class FormTroll {
 
                     try {
                         if (t != null) {
-                            t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
+                            t.getInventory().setHelmet(Item.get(-155));
 
                             player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
                         }

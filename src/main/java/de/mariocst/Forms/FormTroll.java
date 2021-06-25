@@ -177,11 +177,11 @@ public class FormTroll {
 
                     try {
                         if (t != null) {
-                            if (t.getInventory().getItem(36) != Item.get(BlockID.AIR)) {
+                            if (t.getInventory().getHelmet() != Item.get(BlockID.AIR)) {
                                 player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat irgendein Item im Helm Slot!");
                             }
                             else {
-                                t.getInventory().setItem(36, Item.get(BlockID.CARVED_PUMPKIN));
+                                t.getInventory().setHelmet(Item.get(BlockID.CARVED_PUMPKIN));
 
                                 player.sendMessage(MarioMain.getPrefix() + "Der Spieler " + t.getName() + " hat evtl. einen Jumpscare bekommen!");
                             }

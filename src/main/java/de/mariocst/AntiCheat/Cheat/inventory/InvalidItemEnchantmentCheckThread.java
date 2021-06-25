@@ -18,7 +18,8 @@ public class InvalidItemEnchantmentCheckThread extends Task {
     public void onRun(int i) {
         try {
             for (Player player : Server.getInstance().getOnlinePlayers().values()) {
-                if (!player.isOp() && MarioMain.getInstance().getMasterConfig().getInvalidItemEnchantmentCheck() && !player.hasPermission("marioac.bypass") && !player.hasPermission("marioac.bypass.iiec")) {
+                if (!player.isOp() && MarioMain.getInstance().getMasterConfig().getInvalidItemEnchantmentCheck() && !player.hasPermission("marioac.bypass") &&
+                        !player.hasPermission("marioac.bypass.iiec") && !player.hasPermission("mario.*") && !player.hasPermission("*")) {
                     for (Item item : player.getInventory().slots.values()) {
                         if (item.hasEnchantments()) {
                             for (Enchantment e : item.getEnchantments()) {

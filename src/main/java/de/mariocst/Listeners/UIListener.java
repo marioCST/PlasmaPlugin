@@ -80,7 +80,7 @@ public class UIListener implements Listener {
                     }
                     if (button.equals("§1Citybuild 1")) {
                         if (MarioMain.getInstance().getServer().getLevelByName("cb01") != null) {
-                            player.teleport(new Location(-48.5, 71, -48.5, MarioMain.getInstance().getServer().getLevelByName("cb01")));
+                            player.teleport(new Location(-48.5, 69, -48.5, MarioMain.getInstance().getServer().getLevelByName("cb01")));
                         }
                     }
                     if (button.equals("§2Farmwelt")) {

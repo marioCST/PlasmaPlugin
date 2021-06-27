@@ -23,7 +23,7 @@ public class CB1Command extends Command {
             Player player = (Player) sender;
             if(player.hasPermission("mario.cb1") || sender.hasPermission("mario.*") || sender.hasPermission("*") || sender.isOp()) {
                 if (MarioMain.getInstance().getServer().getLevelByName("cb01") != null) {
-                    player.teleport(new Location(-48.5, 69, -48.5, MarioMain.getInstance().getServer().getLevelByName("cb01")));
+                    player.teleport(new Location(-48.5, 69.5, -48.5, MarioMain.getInstance().getServer().getLevelByName("cb01")));
                 }
                 else {
                     player.sendMessage(MarioMain.getPrefix() + "Die Welt des CityBuild 1 wurde umbenannt, oder existiert nicht mehr! Frage im Support nach Hilfe!");

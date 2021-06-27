@@ -399,7 +399,7 @@ public class FormWindows {
                                 takeMoney(player, price);
                                 dispatchCommand(consoleSender(), "give " + player.getName() + " 153 " + (amount * 64));
 
-                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + (amount * 64) + " Quartzerze gekauft!");
+                                player.sendMessage(MarioMain.getPrefix() + "Du hast für " + price + "$ " + amount + " Stacks Quartzerze gekauft!");
                             }
                         }
                     }

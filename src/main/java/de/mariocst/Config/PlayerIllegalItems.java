@@ -27,7 +27,6 @@ public class PlayerIllegalItems {
     }
 
     private void spawnDefaultConfig() {
-        //MarioMain.getInstance().getLogger().notice("Erstelle default Config.");
         save();
     }
 
@@ -40,7 +39,7 @@ public class PlayerIllegalItems {
         save();
     }
 
-    private void save() {
+    public void save() {
         try {
             Config c = new Config(MarioMain.getInstance().getDataFolder() + "/bannedIllegalPlayers.yml", Config.YAML);
             c.setAll(config);

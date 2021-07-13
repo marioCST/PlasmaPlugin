@@ -90,6 +90,17 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
         playerIllegalItems = new PlayerIllegalItems(new Config(this.getDataFolder() + "/bannedIllegalPlayers.yml", Config.YAML).getRootSection());
     }
 
+    public void saveConfigs() {
+        masterConfig.save();
+        playerCheatRecord.save();
+        playerIllegalItems.save();
+    }
+
+    public void reloadConfigs() {
+        Config c = new Config(this.getDataFolder() + "/config.yml", Config.YAML);
+        masterConfig = new MasterConfig(c.getRootSection());
+    }
+
     @Override
     public void addRecord(Player player, AntiCheat.CheatType cheatType) {
         playerCheatRecord.addRecord(player, cheatType);
@@ -166,11 +177,13 @@ public class MarioMain extends PluginBase implements AntiCheatAPI {
             critical("Plugin \"EconomyAPI\" wurde nicht gefunden! Der Adminshop wird deaktiviert! Download: https://cloudburstmc.org/resources/economyapi.14/");
         }
         commandMap.register("cb1", new CB1Command(this));
+        commandMap.register("configurarion", new ConfigurationCommand(this));
         commandMap.register("end", new EndCommand(this));
         commandMap.register("farmwelt", new FarmweltCommand(this));
         commandMap.register("kickall", new KickAllCommand(this));
         commandMap.register("lobby", new LobbyCommand(this));
         commandMap.register("nether", new NetherCommand(this));
+        commandMap.register("serverdown", new ServerDownCommand(this));
         if (this.getServer().getPluginManager().getPlugin("PlotSquared") != null) {
             commandMap.register("rand", new RandCommand(this));
             commandMap.register("wand", new WandCommand(this));
